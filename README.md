@@ -20,5 +20,25 @@ Add-on Packages:
 Platform: macOS
 
 ## Documentation Map
+Data/
+├── cleaned_data.csv
+└── initial_data.csv
+
+Outputs/
+├── EDA/
+│   ├── distribution_of_outages_by_hour.jpg
+│   ├── distribution_of_outages_by_type.jpg
+│   ├── frequency_of_outages_by_month.jpg
+│   └── top_ten_states_by_month.jpg
+└── performance_table.png
+
+Scripts/
+├── EDA.ipynb
+├── cleaning.ipynb
+└── model_and_analysis.ipynb
+
+.gitignore
+License
+README.md
 
 ## Instructions for Reproduction
