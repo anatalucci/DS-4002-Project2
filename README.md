@@ -20,6 +20,8 @@ Add-on Packages:
 Platform: macOS
 
 ## Documentation Map
+
+```
 Data/
 ├── cleaned_data.csv
 └── initial_data.csv
@@ -40,5 +42,6 @@ Scripts/
 .gitignore
 License
 README.md
+```
 
 ## Instructions for Reproduction
