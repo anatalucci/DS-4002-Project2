@@ -63,40 +63,28 @@ README.md
 8. Create a graph of the distribution of the time of day outage began and save as an image to the outputs folder on Github
 9. Create a graph of the distribution of the duration of outages and save as an image to the outputs folder on Github
 #### Data Analysis  
-1. Clean data to remove uppercase characters, non-word characters, extra whitespace
-2. Remove reviews with 3-star reviews
-3. Save to a new csv (filtered_firestick_reviews.csv)
-4. Create a copy of the dataset and create binary labeling for the star-ratings (1 for 4-5 stars, 0 for 1-2 stars)
-5. Save to new csv as a column
-6. Create a data frame to combine the text in the columns "text" and "title"
-7. Set the maximum words and maximum length based on the number of rows and length of text
-8. Tokenize the text by replacing words that are not in the vocab and assign integers to words
-9. Convert sequences of text into sequences of integers and pad the sequences to be the same length
-10. Create two train splits: one with stratification and one without stratification  
-11. Build the text CNN to classify the reviews  
-    a. Set the size of each word vectors and define the input to be a sequence of integers with size maximum length  
-    b. Create three convulations with different kernel sizes (3, 4, 5)  
-    c. Create three pools to reducde the size of each input (based on each convolution)  
-    d. Combine the pooled inputs, create a dropout layer to prevent overfitting and define outputs with sigmoid-activation to output predicted class  
-    e. Define the model with binary cross-entropy loss, the adam optimizer, and accuracy metric  
-    f. Save a visualization of the model as an image to outputs folder  
-12. Train the model on the train split for 30 epochs (one for the stratified and one for the nonstratified)
-13. Create two confusion matrices (one for stratified and one for nonstratified)  
-    a. Save the plots as images to outputs folder
-14. Create two metrics tables (one for stratified and one for nonstratified)  
-    a. Report accuracy, precision, recall, f1, and binary cross-entropy  
-    b. Save the two metrics tables as images to the outputs folder  
-#### Mitigating the Class Imbalance  
-1. Get the indices for each class
-2. Ensure equal sizes of the classes and randomly sample an equal amount from each class (positive and negative)
-3. Combine and shuffle the samples
-4. Create a new set
-5. Create a new train split with the balanced data
-6. Clone and apply the model to the balanced split
-7. Create a confusion matrix for the balanced data  
-     a. Save the matrix as an image to outputs folder
-8. Create a metric table for the balanced data, reporting same metrics  
-     a. Save as an image to outputs folder 
+1. Convert start_time to datetime object
+2. Extract month, day of the week, and day
+3. Create a feature matrix and define y variable
+4. Split data into train and test set
+5. Scale data and convert back to a dataframe
+6. Define cross-validation 
+7. Run a linear regression model on data and test R^2, Mean Absolute Error, and Root Mean Squared Error
+8. Run a random forest model on data and test R^2, Mean Absolute Error, and Root Mean Squared Error
+9. Run an XGBoost model on data and test R^2, Mean Absolute Error, and Root Mean Squared Error
+10.
+### Hyperparameter Tuning 
+1. Rerun linear regression model, but add tuning in order to test model performance  
+    a. Test R^2 score, Mean Absolute Error, and Root Mean Squared Error
+2. Rerun random forest model, but add tuning in order to test model performance  
+    a. Test R^2 score, Mean Absolute Error, and Root Mean Squared Error
+3. Rerun XGBoost model, but add tuning in order to test model performance  
+    a. Test R^2 score, Mean Absolute Error, and Root Mean Squared Error 
+#### Model Evaluation  
+1. Define variables for metrics table
+2. Define models for metrics table
+3. Create a metrics tabel to compare the R^2 score, Mean Absolute Error score, and Root Mean Sqaured Error score of all three models before and after hyperparameter tuning  
+     a. Save as an image to the outputs folder on Github
 
 
 ## Note
