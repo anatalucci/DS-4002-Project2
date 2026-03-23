@@ -45,3 +45,8 @@ README.md
 ```
 
 ## Instructions for Reproduction
+
+
+## Note
+
+The dataset in which we used for this project includes a disclaimer concerning the contents of the data. The most recent version of the disclaimer is uploaded to this repository, but in the case that the disclaimer changes, it can be found here: https://catalog.data.gov/dataset/event-correlated-outage-dataset-in-america
